@@ -1,0 +1,418 @@
+[
+  {
+    "id": "Q1",
+    "question": "What is the exact weight of fine sea salt in the 2 kg country sourdough loaf?",
+    "expected": {
+      "recipe": "R001",
+      "section": "Ingredients"
+    },
+    "hit_in_top5": true,
+    "best_rank": 1,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R001-naive-000",
+        "recipe_id": "R001",
+        "section": "Title",
+        "score": 0.8268,
+        "correct": true
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R001-naive-001",
+        "recipe_id": "R001",
+        "section": "Ingredients",
+        "score": 0.8128,
+        "correct": true
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R006-naive-001",
+        "recipe_id": "R006",
+        "section": "Ingredients",
+        "score": 0.8019,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R005-naive-000",
+        "recipe_id": "R005",
+        "section": "Title",
+        "score": 0.7967,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R005-naive-001",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.7438,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "question": "What hydration percentage does the no-knead fermented focaccia use?",
+    "expected": {
+      "recipe": "R002",
+      "section": "Ingredients"
+    },
+    "hit_in_top5": true,
+    "best_rank": 1,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R002-naive-000",
+        "recipe_id": "R002",
+        "section": "Title",
+        "score": 0.7996,
+        "correct": true
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R003-naive-000",
+        "recipe_id": "R003",
+        "section": "Title",
+        "score": 0.6377,
+        "correct": false
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R005-naive-001",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.6254,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R003-naive-001",
+        "recipe_id": "R003",
+        "section": "Ingredients",
+        "score": 0.6204,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R003-naive-002",
+        "recipe_id": "R003",
+        "section": "Ingredients",
+        "score": 0.62,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "question": "How much gochugaru goes into the baechu kimchi?",
+    "expected": {
+      "recipe": "R004",
+      "section": "Ingredients"
+    },
+    "hit_in_top5": true,
+    "best_rank": 2,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R004-naive-000",
+        "recipe_id": "R004",
+        "section": "Title",
+        "score": 0.7383,
+        "correct": false
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R004-naive-001",
+        "recipe_id": "R004",
+        "section": "Ingredients",
+        "score": 0.6726,
+        "correct": true
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R004-naive-002",
+        "recipe_id": "R004",
+        "section": "Ingredients",
+        "score": 0.6465,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R005-naive-001",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.5506,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R003-naive-000",
+        "recipe_id": "R003",
+        "section": "Title",
+        "score": 0.5346,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "question": "Which recipe uses exactly 7 g of fine sea salt?",
+    "expected": {
+      "recipe": "R002",
+      "section": "Ingredients"
+    },
+    "hit_in_top5": true,
+    "best_rank": 1,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R002-naive-001",
+        "recipe_id": "R002",
+        "section": "Ingredients",
+        "score": 0.7974,
+        "correct": true
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R001-naive-001",
+        "recipe_id": "R001",
+        "section": "Ingredients",
+        "score": 0.7575,
+        "correct": false
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R005-naive-001",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.7573,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R003-naive-001",
+        "recipe_id": "R003",
+        "section": "Ingredients",
+        "score": 0.757,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R006-naive-001",
+        "recipe_id": "R006",
+        "section": "Ingredients",
+        "score": 0.7352,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "question": "How many baguettes does the sourdough baguette recipe make, and how heavy is each piece?",
+    "expected": {
+      "recipe": "R005",
+      "section": "Method"
+    },
+    "hit_in_top5": false,
+    "best_rank": null,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R005-naive-000",
+        "recipe_id": "R005",
+        "section": "Title",
+        "score": 0.8309,
+        "correct": false
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R001-naive-000",
+        "recipe_id": "R001",
+        "section": "Title",
+        "score": 0.7514,
+        "correct": false
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R006-naive-000",
+        "recipe_id": "R006",
+        "section": "Title",
+        "score": 0.7085,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R006-naive-001",
+        "recipe_id": "R006",
+        "section": "Ingredients",
+        "score": 0.7027,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R001-naive-001",
+        "recipe_id": "R001",
+        "section": "Ingredients",
+        "score": 0.6847,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "question": "What pH must the fermented jalape\u00f1o hot sauce reach before it can be bottled?",
+    "expected": {
+      "recipe": "R003",
+      "section": "Method"
+    },
+    "hit_in_top5": true,
+    "best_rank": 1,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R003-naive-002",
+        "recipe_id": "R003",
+        "section": "Ingredients",
+        "score": 0.7783,
+        "correct": true
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R003-naive-000",
+        "recipe_id": "R003",
+        "section": "Title",
+        "score": 0.776,
+        "correct": false
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R003-naive-003",
+        "recipe_id": "R003",
+        "section": "Ingredients",
+        "score": 0.6839,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R003-naive-001",
+        "recipe_id": "R003",
+        "section": "Ingredients",
+        "score": 0.6751,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R005-naive-001",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.6543,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "question": "How long is the bulk ferment for the country sourdough loaf, and at what temperature?",
+    "expected": {
+      "recipe": "R001",
+      "section": "Method"
+    },
+    "hit_in_top5": false,
+    "best_rank": null,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R001-naive-000",
+        "recipe_id": "R001",
+        "section": "Title",
+        "score": 0.8128,
+        "correct": false
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R001-naive-001",
+        "recipe_id": "R001",
+        "section": "Ingredients",
+        "score": 0.777,
+        "correct": false
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R006-naive-001",
+        "recipe_id": "R006",
+        "section": "Ingredients",
+        "score": 0.7709,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R005-naive-002",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.7511,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R006-naive-002",
+        "recipe_id": "R006",
+        "section": "Ingredients",
+        "score": 0.7509,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "question": "What is the baker's percentage of salt in the 24-hour fermented pizza dough?",
+    "expected": {
+      "recipe": "R006",
+      "section": "Ingredients"
+    },
+    "hit_in_top5": true,
+    "best_rank": 5,
+    "top5": [
+      {
+        "rank": 1,
+        "chunk_id": "R006-naive-000",
+        "recipe_id": "R006",
+        "section": "Title",
+        "score": 0.8117,
+        "correct": false
+      },
+      {
+        "rank": 2,
+        "chunk_id": "R005-naive-001",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.7311,
+        "correct": false
+      },
+      {
+        "rank": 3,
+        "chunk_id": "R002-naive-001",
+        "recipe_id": "R002",
+        "section": "Ingredients",
+        "score": 0.7203,
+        "correct": false
+      },
+      {
+        "rank": 4,
+        "chunk_id": "R005-naive-002",
+        "recipe_id": "R005",
+        "section": "Ingredients",
+        "score": 0.7067,
+        "correct": false
+      },
+      {
+        "rank": 5,
+        "chunk_id": "R006-naive-001",
+        "recipe_id": "R006",
+        "section": "Ingredients",
+        "score": 0.706,
+        "correct": true
+      }
+    ]
+  }
+]
