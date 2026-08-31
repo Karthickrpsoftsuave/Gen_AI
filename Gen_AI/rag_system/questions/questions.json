@@ -1,0 +1,112 @@
+{
+  "_note": "The 8 benchmark questions were written directly from the 6 recipe cards BEFORE any retrieval was run (Set B, section 7: writing questions after seeing retrieval measures question-writing, not chunking). 5 of the 8 depend on a row inside an ingredient table (requirement 2: at least 3).",
+  "benchmark": [
+    {
+      "id": "Q1",
+      "question": "What is the exact weight of fine sea salt in the 2 kg country sourdough loaf?",
+      "expected_recipe": "R001",
+      "expected_section": "Ingredients",
+      "expected_fact": "20 g",
+      "depends_on": "ingredient-table-row"
+    },
+    {
+      "id": "Q2",
+      "question": "What hydration percentage does the no-knead fermented focaccia use?",
+      "expected_recipe": "R002",
+      "expected_section": "Ingredients",
+      "expected_fact": "80%",
+      "depends_on": "ingredient-table-row"
+    },
+    {
+      "id": "Q3",
+      "question": "How much gochugaru goes into the baechu kimchi?",
+      "expected_recipe": "R004",
+      "expected_section": "Ingredients",
+      "expected_fact": "45 g",
+      "depends_on": "ingredient-table-row"
+    },
+    {
+      "id": "Q4",
+      "question": "Which recipe uses exactly 7 g of fine sea salt?",
+      "expected_recipe": "R002",
+      "expected_section": "Ingredients",
+      "expected_fact": "7 g",
+      "depends_on": "ingredient-table-row"
+    },
+    {
+      "id": "Q5",
+      "question": "How many baguettes does the sourdough baguette recipe make, and how heavy is each piece?",
+      "expected_recipe": "R005",
+      "expected_section": "Method",
+      "expected_fact": "4 pieces of about 415 g",
+      "depends_on": "method"
+    },
+    {
+      "id": "Q6",
+      "question": "What pH must the fermented jalapeño hot sauce reach before it can be bottled?",
+      "expected_recipe": "R003",
+      "expected_section": "Method",
+      "expected_fact": "below 3.8",
+      "depends_on": "method"
+    },
+    {
+      "id": "Q7",
+      "question": "How long is the bulk ferment for the country sourdough loaf, and at what temperature?",
+      "expected_recipe": "R001",
+      "expected_section": "Method",
+      "expected_fact": "4 hours at 24",
+      "depends_on": "method"
+    },
+    {
+      "id": "Q8",
+      "question": "What is the baker's percentage of salt in the 24-hour fermented pizza dough?",
+      "expected_recipe": "R006",
+      "expected_section": "Ingredients",
+      "expected_fact": "3%",
+      "depends_on": "ingredient-table-row"
+    }
+  ],
+  "answerable_generation": [
+    {
+      "id": "A1",
+      "question": "How much fine sea salt does the 2 kg country sourdough loaf need?",
+      "expected": "20 g",
+      "expected_recipe": "R001"
+    },
+    {
+      "id": "A2",
+      "question": "What hydration percentage does the no-knead fermented focaccia use?",
+      "expected": "80%",
+      "expected_recipe": "R002"
+    },
+    {
+      "id": "A3",
+      "question": "What pH must the fermented jalapeño hot sauce reach before bottling?",
+      "expected": "below 3.8",
+      "expected_recipe": "R003"
+    }
+  ],
+  "unanswerable_generation": [
+    {
+      "id": "U1",
+      "question": "What is the calorie count and nutrition macro breakdown of the focaccia?"
+    },
+    {
+      "id": "U2",
+      "question": "What is the sodium content per serving of one sourdough baguette?"
+    },
+    {
+      "id": "U3",
+      "question": "Which wine would pair best with the baechu kimchi?"
+    }
+  ],
+  "bonus": {
+    "question": "When does the salt go into the country sourdough loaf?",
+    "expected_recipe": "R001",
+    "expected_fact": "after the autolyse"
+  },
+  "filter_demo": {
+    "question": "How long is the bulk ferment for the country sourdough loaf, and at what temperature?",
+    "tag_filter": "gluten-free"
+  }
+}
