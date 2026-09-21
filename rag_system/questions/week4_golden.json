@@ -1,0 +1,74 @@
+[
+  {
+    "id": "W4-01",
+    "question": "What is the exact weight of fine sea salt in the 2 kg country sourdough loaf?",
+    "expected_chunk_id": "R001_country_sourdough-1",
+    "expected_fact": "20 g"
+  },
+  {
+    "id": "W4-02",
+    "question": "What hydration percentage does the no-knead fermented focaccia use?",
+    "expected_chunk_id": "R002_focaccia-1",
+    "expected_fact": "80%"
+  },
+  {
+    "id": "W4-03",
+    "question": "How much gochugaru goes into baechu kimchi?",
+    "expected_chunk_id": "R004_kimchi-1",
+    "expected_fact": "45 g"
+  },
+  {
+    "id": "W4-04",
+    "question": "Which recipe uses exactly 7 g of fine sea salt?",
+    "expected_chunk_id": "R002_focaccia-1",
+    "expected_fact": "7 g"
+  },
+  {
+    "id": "W4-05",
+    "question": "How many baguettes does the sourdough baguette recipe make and how heavy is each piece?",
+    "expected_chunk_id": "R005_baguettes-2",
+    "expected_fact": "415 g"
+  },
+  {
+    "id": "W4-06",
+    "question": "What pH must fermented jalapeno hot sauce reach before bottling?",
+    "expected_chunk_id": "R003_hot_sauce-2",
+    "expected_fact": "3.8"
+  },
+  {
+    "id": "W4-07",
+    "question": "How long is the country sourdough bulk ferment and at what temperature?",
+    "expected_chunk_id": "R001_country_sourdough-2",
+    "expected_fact": "4 hours"
+  },
+  {
+    "id": "W4-08",
+    "question": "What is the baker's percentage of salt in the 24-hour fermented pizza dough?",
+    "expected_chunk_id": "R006_pizza_dough-1",
+    "expected_fact": "3%"
+  },
+  {
+    "id": "W4-09",
+    "question": "How long does baechu kimchi ferment at room temperature?",
+    "expected_chunk_id": "R004_kimchi-2",
+    "expected_fact": "3 days"
+  },
+  {
+    "id": "W4-10",
+    "question": "At what exact oven temperature are the sourdough baguettes baked?",
+    "expected_chunk_id": "R005_baguettes-2",
+    "expected_fact": "250"
+  },
+  {
+    "id": "W4-11",
+    "question": "How long is the cold ferment for the 24-hour pizza dough?",
+    "expected_chunk_id": "R006_pizza_dough-2",
+    "expected_fact": "24 hours"
+  },
+  {
+    "id": "W4-12",
+    "question": "What is the exact weight of garlic cloves in the fermented jalapeno hot sauce?",
+    "expected_chunk_id": "R003_hot_sauce-1",
+    "expected_fact": "40 g"
+  }
+]
