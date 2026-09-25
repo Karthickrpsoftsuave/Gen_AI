@@ -1,0 +1,200 @@
+[
+  {
+    "direction": "client->server",
+    "msg": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2024-11-05",
+        "capabilities": {
+          "roots": {
+            "listChanged": true
+          }
+        },
+        "clientInfo": {
+          "name": "week9_mcp_agent",
+          "version": "1.0.0"
+        }
+      },
+      "_field_annotations": {
+        "jsonrpc": "JSON-RPC version string \u2014 always 2.0 per spec",
+        "id": "correlates request to response; server echoes this back",
+        "method": "MCP method name \u2014 initialize starts the session",
+        "params.protocolVersion": "MCP wire protocol version",
+        "params.capabilities": "feature flags the client supports",
+        "params.clientInfo": "identifies the host (agent) process",
+        "MODEL_CALL_LOCATION": "NOT HERE \u2014 Gemini runs in week9_mcp_agent.py. Server sees only this JSON message."
+      }
+    }
+  },
+  {
+    "direction": "server->client",
+    "msg": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "protocolVersion": "2024-11-05",
+        "capabilities": {
+          "tools": {}
+        },
+        "serverInfo": {
+          "name": "ingredient-database-server",
+          "version": "1.0.0"
+        }
+      },
+      "_field_annotations": {
+        "id": "echoes request id:1 \u2014 confirms which request this answers",
+        "result": "successful response payload (vs 'error' for failures)",
+        "result.protocolVersion": "confirms negotiated MCP version",
+        "result.capabilities.tools": "server supports tools/list and tools/call",
+        "result.serverInfo": "server identity \u2014 the agent logs this for tracing",
+        "MODEL_CALL_LOCATION": "NOT HERE \u2014 server has no LLM; it just confirms capabilities."
+      }
+    }
+  },
+  {
+    "direction": "client->server",
+    "msg": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/list",
+      "params": {},
+      "_field_annotations": {
+        "method": "tools/list \u2014 agent asks what tools the server exposes",
+        "params": "empty \u2014 no pagination or filter in this call",
+        "MODEL_CALL_LOCATION": "NOT HERE \u2014 agent is asking the server, not asking the LLM."
+      }
+    }
+  },
+  {
+    "direction": "server->client",
+    "msg": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "tools": [
+          {
+            "name": "lookup_ingredient",
+            "description": "Look up allergen flags and per-100g nutrition for a named ingredient.\n\nCall this tool when the user asks about allergens or nutrition for a\nspecific ingredient, or when you need to verify whether a su",
+            "inputSchema": {
+              "properties": {
+                "ingredient_name": {
+                  "type": "string",
+                  "description": "The ingredient to look up, e.g. 'soy sauce', 'almond flour'.\nCase-insensitive. Spell it as it appears in the recipe."
+                }
+              },
+              "required": [
+                "ingredient_name"
+              ],
+              "type": "object",
+              "additionalProperties": false
+            }
+          },
+          {
+            "name": "list_ingredients",
+            "description": "Return the full list of ingredient names in the database.\n\nUse this tool to discover available ingredients before calling\nlookup_ingredient, or to show the user which ingredients are indexed.",
+            "inputSchema": {
+              "properties": {},
+              "type": "object",
+              "additionalProperties": false
+            }
+          },
+          {
+            "name": "search_ingredients",
+            "description": "Search ingredients by partial or approximate name.\n\nUse this before lookup_ingredient when you are unsure of the exact name.\nReturns all ingredients whose name contains the search term.",
+            "inputSchema": {
+              "properties": {
+                "partial_name": {
+                  "type": "string",
+                  "description": "Partial ingredient name to search for, e.g. 'flour', 'sauce'."
+                }
+              },
+              "required": [
+                "partial_name"
+              ],
+              "type": "object",
+              "additionalProperties": false
+            }
+          }
+        ]
+      },
+      "_field_annotations": {
+        "result.tools": "array of tool objects with name, description, inputSchema",
+        "inputSchema": "JSON Schema describing the tool parameters \u2014 agent converts this to a Gemini FunctionDeclaration",
+        "MODEL_CALL_LOCATION": "NOT HERE \u2014 server returns static schemas. No LLM on server side.",
+        "next_step": "Agent calls mcp_tools_to_gemini() to convert these schemas, then passes them to client.models.generate_content()"
+      }
+    }
+  },
+  {
+    "direction": "client->server",
+    "msg": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "tools/call",
+      "params": {
+        "name": "lookup_ingredient",
+        "arguments": {
+          "ingredient_name": "soy sauce"
+        }
+      },
+      "_field_annotations": {
+        "method": "tools/call \u2014 agent dispatches Gemini's chosen tool call",
+        "params.name": "tool name chosen by Gemini in the previous model response",
+        "params.arguments": "arguments extracted from Gemini FunctionCall.args dict",
+        "MODEL_CALL_LOCATION": "MODEL CALL HAPPENED IN HOST just before this message. Gemini produced a function_call; agent is now dispatching it via JSON-RPC."
+      }
+    }
+  },
+  {
+    "direction": "server->client",
+    "msg": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": {
+              "found": true,
+              "ingredient": "soy sauce",
+              "allergens": [
+                "soy",
+                "gluten",
+                "wheat"
+              ],
+              "may_contain": [],
+              "nutrition_per_100g": {
+                "energy_kcal": 60,
+                "protein_g": 5.6,
+                "fat_g": 0.1,
+                "carbs_g": 9.5,
+                "fibre_g": 0,
+                "sodium_mg": 5720
+              },
+              "notes": "Contains soy (major allergen) and wheat gluten. Use tamari as GF substitute."
+            }
+          }
+        ]
+      },
+      "_field_annotations": {
+        "result.content": "array of content items \u2014 MCP wraps tool output in content blocks",
+        "result.content[0].type": "text \u2014 serialised JSON string of the tool return value",
+        "result.content[0].text": "actual tool output: allergens=['soy','gluten','wheat'], sodium=5720mg/100g",
+        "MODEL_CALL_LOCATION": "NOT HERE \u2014 server executed a Python dict lookup. No LLM. Agent will feed this back to Gemini as a FunctionResponse in the NEXT model call.",
+        "summary": "The Gemini LLM runs ONLY in week9_mcp_agent.py. Server processes JSON-RPC; has no idea which model called it."
+      }
+    }
+  },
+  {
+    "direction": "_SUMMARY",
+    "msg": {
+      "model_call_location": "HOST \u2014 inside week9_mcp_agent.py, client.models.generate_content(). NOT in any MCP server.",
+      "server_role": "MCP servers respond to JSON-RPC calls (initialize, tools/list, tools/call). They run deterministic Python code, not LLM calls.",
+      "protocol": "JSON-RPC 2.0 over stdio (stdin/stdout pipes)",
+      "mcp_version": "2024-11-05",
+      "total_messages": 7
+    }
+  }
+]
