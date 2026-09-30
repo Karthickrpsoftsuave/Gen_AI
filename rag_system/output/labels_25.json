@@ -1,0 +1,39 @@
+﻿{
+  "created_at": "2026-09-04T11:11:26+00:00",
+  "note": "Hand-labels written BEFORE any judge call. Based on recipe card knowledge (R001-R006) only, not on judge output. For OOC_REFUSAL mode: acceptable=true means the system correctly refused (refusal IS the correct response).",
+  "label_count": 25,
+  "assertion_criteria_excluded": [
+    "ingredient-in-method",
+    "allergen-warning-present",
+    "temperature-has-units",
+    "servings-echoed"
+  ],
+  "judge_binary_criterion": "substitution is culinarily acceptable (function, method, flavour direction)",
+  "labels": [
+    {"id": "S01", "mode": "ALLERGEN_SAFETY", "acceptable": false, "reason": "Almond flour introduces a tree-nut allergen not present in focaccia (R002). Protein too low for stretch-and-fold method. Doubly unacceptable: allergen-unsafe and structurally wrong."},
+    {"id": "S02", "mode": "ALLERGEN_SAFETY", "acceptable": false, "reason": "Soy sauce introduces a soy allergen not present in R003. It disrupts the salt-to-pepper brine ratio (3.75%) required for safe lacto-fermentation at 21 C."},
+    {"id": "S03", "mode": "ALLERGEN_SAFETY", "acceptable": true, "reason": "Rice flour is a documented GF substitute. Removes the gluten allergen from R005, which is an allergen safety improvement. Texture differs but substitution is safe and culinarily accepted."},
+    {"id": "S04", "mode": "ALLERGEN_SAFETY", "acceptable": false, "reason": "Shrimp paste introduces shellfish allergen not present in kimchi (R004). Major new allergen added without equivalent in original recipe."},
+    {"id": "S05", "mode": "ALLERGEN_SAFETY", "acceptable": true, "reason": "Red chili flakes share the same allergen class as gochugaru (none declared). Allergen-safe substitution; heat level will differ but no allergen risk."},
+    {"id": "S06", "mode": "FLAVOUR_PLAUSIBILITY", "acceptable": true, "reason": "Coconut oil is a known fat substitute in baking. Works in focaccia (R002) at same quantity. Flavour shifts to tropical-sweet; method remains intact."},
+    {"id": "S07", "mode": "FLAVOUR_PLAUSIBILITY", "acceptable": true, "reason": "Habanero peppers are in the capsicum family, just much hotter. Same fermentation behaviour and method. Sauce will be significantly hotter."},
+    {"id": "S08", "mode": "FLAVOUR_PLAUSIBILITY", "acceptable": false, "reason": "Commercial instant yeast cannot replicate a 24-hour sourdough fermentation. Lacks lactic acid bacteria for flavour development. R006 depends on LAB for its flavour profile."},
+    {"id": "S09", "mode": "FLAVOUR_PLAUSIBILITY", "acceptable": false, "reason": "Sweet smoked paprika has negligible heat vs gochugaru's 4000-8000 Scoville and a completely different flavour profile. Kimchi made with paprika tastes nothing like kimchi."},
+    {"id": "S10", "mode": "FLAVOUR_PLAUSIBILITY", "acceptable": true, "reason": "Whole milk in sourdough creates a known enriched-dough variant. Method (R001) remains compatible. Flavour direction is enriched-savoury, a recognised sourdough category."},
+    {"id": "S11", "mode": "METHOD_COMPATIBILITY", "acceptable": false, "reason": "Cake flour (7-9% protein) cannot develop gluten through stretch-and-fold. Focaccia (R002) will collapse into a flat, dense mass."},
+    {"id": "S12", "mode": "METHOD_COMPATIBILITY", "acceptable": true, "reason": "Kosher salt at same weight functions identically to fine sea salt in R001. Crystal size differs but dissolves fully during mixing. No method adjustment needed."},
+    {"id": "S13", "mode": "METHOD_COMPATIBILITY", "acceptable": false, "reason": "48 C kills sourdough starter organisms (die above ~40 C). The 24-hour fermentation in R006 becomes impossible. Dough will not rise."},
+    {"id": "S14", "mode": "METHOD_COMPATIBILITY", "acceptable": false, "reason": "Coil folds are the primary gluten-development mechanism in R005 (no-knead style). Skipping all folds produces weak, extensible dough. Baguettes will be dense and gummy."},
+    {"id": "S15", "mode": "METHOD_COMPATIBILITY", "acceptable": true, "reason": "Poolish at 100% hydration is a pre-ferment functionally analogous to sourdough starter. Equal weight provides comparable leavening. R001 method steps remain fully compatible."},
+    {"id": "S16", "mode": "QUANTITY_SCALING", "acceptable": true, "reason": "Linear doubling: flour 2000g, water 1440g, starter 400g, salt 40g. All baker's percentages preserved. Method timing unchanged."},
+    {"id": "S17", "mode": "QUANTITY_SCALING", "acceptable": true, "reason": "Linear halving from 500g to 250g flour: water 200g, olive oil 12.5g, salt 3.5g. All ratios preserved. Method unchanged."},
+    {"id": "S18", "mode": "QUANTITY_SCALING", "acceptable": true, "reason": "Halving all baguette quantities gives 2 pieces of ~415g each. Method (R005) identical at half scale. Serving count correctly becomes 2."},
+    {"id": "S19", "mode": "QUANTITY_SCALING", "acceptable": false, "reason": "Keeping 30g salt with only 300g jalapenos raises salt ratio from 3.75% to 10%. Too hostile for lactobacillus; batch will fail to ferment and be inedibly salty."},
+    {"id": "S20", "mode": "QUANTITY_SCALING", "acceptable": true, "reason": "Tripling all kimchi quantities: cabbage 3600g, salt 180g, water 2700g, etc. All ratios preserved. Fermentation time unchanged."},
+    {"id": "S21", "mode": "OOC_REFUSAL", "acceptable": true, "reason": "REGRESSION T06: Moisture-loss conversion for roasted garlic is not in the corpus. R003 only states 40g garlic cloves. A correct refusal is the acceptable response."},
+    {"id": "S22", "mode": "OOC_REFUSAL", "acceptable": true, "reason": "REGRESSION T19: Sodium content per serving is not in any recipe card. A system that answers is hallucinating; a correct refusal is the acceptable response."},
+    {"id": "S23", "mode": "OOC_REFUSAL", "acceptable": true, "reason": "Probiotic supplement health equivalence is health science not in any recipe card. A correct refusal is the acceptable response."},
+    {"id": "S24", "mode": "OOC_REFUSAL", "acceptable": true, "reason": "Digestive health comparison between fermentation and probiotic capsules is biochemistry absent from the recipe corpus. A correct refusal is the acceptable response."},
+    {"id": "S25", "mode": "OOC_REFUSAL", "acceptable": true, "reason": "Glycemic index data is nutrition science absent from all recipe cards. R006 lists flour by weight only. A correct refusal is the acceptable response."}
+  ]
+}

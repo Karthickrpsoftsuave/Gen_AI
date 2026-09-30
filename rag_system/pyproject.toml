@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gemini-recipe-rag"
+version = "1.0.0"
+description = "A small Gemini-powered recipe RAG application with Week 4 and Week 5 evaluation tooling."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-genai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+]
+
+[project.scripts]
+recipe-rag = "rag_app.cli:main"
+recipe-rag-server = "rag_app.api:start"
+
+[tool.setuptools.packages.find]
+where = ["src"]

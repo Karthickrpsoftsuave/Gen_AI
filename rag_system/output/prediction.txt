@@ -1,0 +1,16 @@
+﻿Written at: 2026-09-04T11:14:45+00:00
+
+Prediction (written BEFORE judge_v2 iteration):
+
+The judge will most often disagree on OOC_REFUSAL cases -- marking a correct refusal as
+UNACCEPTABLE because it produces no useful substitution output -- and on FLAVOUR_PLAUSIBILITY
+edge-cases that require fermentation-domain knowledge to distinguish acceptable from
+unacceptable (e.g. commercial yeast vs. sourdough starter changes the flavour category
+fundamentally; paprika vs. gochugaru are not in the same flavour direction).
+Adding those two disagreement examples as few-shot demonstrations will reduce that class of
+error and improve agreement on OOC_REFUSAL and FLAVOUR_PLAUSIBILITY modes specifically.
+
+Prediction scoring (filled in AFTER running):
+  Was the prediction right about OOC_REFUSAL?  [TBD]
+  Was the prediction right about FLAVOUR_PLAUSIBILITY?  [TBD]
+  Where the prediction was wrong:  [TBD]

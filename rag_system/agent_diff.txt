@@ -1,0 +1,30 @@
+DELIVERABLE: agent_diff.txt
+===========================
+Requirement: Zero lines changed in week9_mcp_agent.py when adding Server 2.
+
+PROOF
+-----
+The agent module (week9_mcp_agent.py) reads servers from mcp_config.json at
+runtime. Adding a second server requires editing only mcp_config.json.
+
+  mcp_config.json BEFORE (Server 1 only):
+  -----------------------------------------
+  {"servers": [{"name": "recipe-search-server", "command": ".venv/Scripts/python",
+               "args": ["week9_recipe_mcp_server.py"]}]}
+
+  mcp_config.json AFTER (Server 1 + Server 2 added):
+  ---------------------------------------------------
+  {"servers": [
+    {"name": "recipe-search-server",       "args": ["week9_recipe_mcp_server.py"]},
+    {"name": "ingredient-database-server", "args": ["week9_ingredient_db_server.py"]}  <- ADDED
+  ]}
+
+git diff week9_mcp_agent.py (between those two config states):
+--------------------------------------------------------------
+  (no output — zero lines changed)
+
+The agent uses load_mcp_config() which reads whatever servers are listed,
+then discover_tools_from_server() which connects to each generically.
+No tool name, description, or schema is hard-coded in week9_mcp_agent.py.
+
+RESULT: 0 lines changed in the agent module. Config change only. Proved.

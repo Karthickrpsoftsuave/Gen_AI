@@ -1,0 +1,43 @@
+﻿CONFIG DIFF — mcp_config.json
+==============================================
+Adding Server 2 required ONLY this config change:
+
+BEFORE (Server 1 only):
+{
+  "servers": [
+    {
+      "name": "recipe-search-server",
+      "transport": "stdio",
+      "command": ".venv/Scripts/python",
+      "args": ["week9_recipe_mcp_server.py"]
+    }
+  ]
+}
+
+AFTER (Server 1 + Server 2):
+{
+  "servers": [
+    {
+      "name": "recipe-search-server",
+      "transport": "stdio",
+      "command": ".venv/Scripts/python",
+      "args": ["week9_recipe_mcp_server.py"]
+    },
+    {
+      "name": "ingredient-database-server",
+      "transport": "stdio",
+      "command": ".venv/Scripts/python",
+      "args": ["week9_ingredient_db_server.py"]
+    }
+  ]
+}
+
+Lines added:
++    {
++      "name": "ingredient-database-server",
++      "transport": "stdio",
++      "command": ".venv/Scripts/python",
++      "args": ["week9_ingredient_db_server.py"]
++    }
+
+Lines changed in week9_mcp_agent.py: 0

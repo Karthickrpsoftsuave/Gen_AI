@@ -1,0 +1,528 @@
+{
+  "single": [
+    {
+      "id": "S01",
+      "mode": "ALLERGEN_SAFETY",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": false,
+      "pass": false,
+      "judge_reason": "The system correctly refused to answer because the recipe card does not contain the requested substitution information.",
+      "input_tokens": 522,
+      "output_tokens": 11,
+      "total_tokens": 533,
+      "cost_usd": 0.0001841,
+      "latency_secs": 1.3806315999972867
+    },
+    {
+      "id": "S02",
+      "mode": "ALLERGEN_SAFETY",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": false,
+      "pass": false,
+      "judge_reason": "The system correctly refused to answer because the substitution request relies on information not found in the recipe cards.",
+      "input_tokens": 440,
+      "output_tokens": 11,
+      "total_tokens": 451,
+      "cost_usd": 0.0001595,
+      "latency_secs": 1.1948579000018071
+    },
+    {
+      "id": "S06",
+      "mode": "FLAVOUR_PLAUSIBILITY",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the substitution request relies on information not found in the recipe documents.",
+      "input_tokens": 569,
+      "output_tokens": 11,
+      "total_tokens": 580,
+      "cost_usd": 0.0001982,
+      "latency_secs": 1.2663300999993226
+    },
+    {
+      "id": "S07",
+      "mode": "FLAVOUR_PLAUSIBILITY",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the recipe card does not contain information about substituting habanero peppers for jalapeños.",
+      "input_tokens": 440,
+      "output_tokens": 11,
+      "total_tokens": 451,
+      "cost_usd": 0.0001595,
+      "latency_secs": 1.7850697000103537
+    },
+    {
+      "id": "S11",
+      "mode": "METHOD_COMPATIBILITY",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": false,
+      "pass": false,
+      "judge_reason": "The system correctly refused to answer because the substitution request relies on information not present in the provided recipe cards.",
+      "input_tokens": 461,
+      "output_tokens": 11,
+      "total_tokens": 472,
+      "cost_usd": 0.0001658,
+      "latency_secs": 1.693852500000503
+    },
+    {
+      "id": "S12",
+      "mode": "METHOD_COMPATIBILITY",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the recipe card does not contain information about substituting fine sea salt with kosher salt.",
+      "input_tokens": 588,
+      "output_tokens": 11,
+      "total_tokens": 599,
+      "cost_usd": 0.0002039,
+      "latency_secs": 1.1896393000060925
+    },
+    {
+      "id": "S16",
+      "mode": "QUANTITY_SCALING",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the recipe card does not contain the requested information for this specific scaling request.",
+      "input_tokens": 514,
+      "output_tokens": 11,
+      "total_tokens": 525,
+      "cost_usd": 0.0001817,
+      "latency_secs": 2.210313599993242
+    },
+    {
+      "id": "S18",
+      "mode": "QUANTITY_SCALING",
+      "answer": "**Ingredient change:** Bread flour (850 g) → 425 g; Water (620 g) → 310 g; Ripe sourdough starter (170 g) → 85 g; Fine sea salt (17 g) → 8.5 g\n**Method adjustment:** Divide the dough into 2 pieces of about 415 g each.\n**Allergen note:** None\n**Serves:** 2 baguettes",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "Halving all ingredient quantities and adjusting the final dough division from 4 to 2 pieces is mathematically and culinarily correct for yielding 2 baguettes instead of 4.",
+      "input_tokens": 463,
+      "output_tokens": 101,
+      "total_tokens": 564,
+      "cost_usd": 0.00039139999999999997,
+      "latency_secs": 3.294384100008756
+    },
+    {
+      "id": "S21",
+      "mode": "OOC_REFUSAL",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the requested information regarding the weight adjustment for roasted garlic is not present in the recipe cards.",
+      "input_tokens": 538,
+      "output_tokens": 11,
+      "total_tokens": 549,
+      "cost_usd": 0.0001889,
+      "latency_secs": 32.431554199996754
+    },
+    {
+      "id": "S22",
+      "mode": "OOC_REFUSAL",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the recipe cards do not contain the necessary information to create a gluten-free sourdough baguette while maintaining specific sodium levels.",
+      "input_tokens": 396,
+      "output_tokens": 11,
+      "total_tokens": 407,
+      "cost_usd": 0.0001463,
+      "latency_secs": 1.3457751999958418
+    }
+  ],
+  "multi": [
+    {
+      "id": "S01",
+      "mode": "ALLERGEN_SAFETY",
+      "answer": "**Ingredient change:** Bread flour -> almond flour (not recommended: almond flour lacks gluten and cannot provide the necessary structure, rise, or chewy texture required for this focaccia).\n**Method adjustment:** No adjustment required\n**Allergen note:** Allergen data unavailable — please verify independently\n**Serves:** I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": false,
+      "pass": false,
+      "judge_reason": "The system correctly evaluated that almond flour cannot replace bread flour in a yeast-leavened bread and provided a sound culinary explanation.",
+      "input_tokens": 984,
+      "output_tokens": 168,
+      "total_tokens": 1152,
+      "cost_usd": 0.0007152,
+      "latency_secs": 2.3393990000040503,
+      "allergen_failed": true,
+      "sub_worker_tokens": 556,
+      "allergen_worker_tokens": 0
+    },
+    {
+      "id": "S02",
+      "mode": "ALLERGEN_SAFETY",
+      "answer": "**Ingredient change:** Fine sea salt -> Soy sauce (Not recommended: disrupts the precise 3.75% salinity required for safe fermentation)\n**Method adjustment:** No adjustment required\n**Allergen note:** Substituting soy sauce introduces soy and gluten (wheat)\n**Serves:** I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": false,
+      "pass": false,
+      "judge_reason": "The system correctly evaluated the substitution and advised against it because soy sauce would disrupt the necessary salinity required for safe fermentation.",
+      "input_tokens": 1313,
+      "output_tokens": 204,
+      "total_tokens": 1517,
+      "cost_usd": 0.0009039,
+      "latency_secs": 3.800735099997837,
+      "allergen_failed": false,
+      "sub_worker_tokens": 492,
+      "allergen_worker_tokens": 408
+    },
+    {
+      "id": "S06",
+      "mode": "FLAVOUR_PLAUSIBILITY",
+      "answer": "**Ingredient change:** Olive oil -> Coconut oil\n**Method adjustment:** Melt the coconut oil before use if solid; note that it will impart a coconut flavor and alter the traditional texture of the crust and crumb.\n**Allergen note:** No new allergens. Coconut is botanically a fruit, though classified as a tree nut by the FDA; however, substituting coconut oil for olive oil introduces no common major allergens (dairy, soy, eggs, gluten, shellfish, peanuts, or traditional tree nuts) assuming standard refinement. Monitor if sensitive to coconut.\n**Serves:** I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The substitution of coconut oil for olive oil is culinarily reasonable, functions as a fat in the dough, and the method correctly accounts for its solid state.",
+      "input_tokens": 1593,
+      "output_tokens": 276,
+      "total_tokens": 1869,
+      "cost_usd": 0.0011679000000000001,
+      "latency_secs": 14.042246700002579,
+      "allergen_failed": false,
+      "sub_worker_tokens": 596,
+      "allergen_worker_tokens": 577
+    },
+    {
+      "id": "S07",
+      "mode": "FLAVOUR_PLAUSIBILITY",
+      "answer": "**Ingredient change:** Jalapeño peppers -> Habanero peppers\n**Method adjustment:** No adjustment required, but you must still verify that the final pH reads below 3.8 before bottling to ensure food safety.\n**Allergen note:** No new allergens.\n**Serves:** I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "Replacing jalapeños with habaneros in a fermented hot sauce is culinarily reasonable and maintains the same fermentation and preservation method, though it will result in a significantly spicier product.",
+      "input_tokens": 1278,
+      "output_tokens": 170,
+      "total_tokens": 1448,
+      "cost_usd": 0.0008084,
+      "latency_secs": 6.864838900000905,
+      "allergen_failed": false,
+      "sub_worker_tokens": 475,
+      "allergen_worker_tokens": 390
+    },
+    {
+      "id": "S11",
+      "mode": "METHOD_COMPATIBILITY",
+      "answer": "**Ingredient change:** Bread flour -> Cake flour (Replacing bread flour with cake flour is culinarily unacceptable for this no-knead fermented focaccia. Bread flour has a high protein content necessary to develop the strong gluten network required to hold an 80% hydration dough and create the characteristic chewy texture and airy crumb. Cake flour is low in protein and will result in a weak structure, causing the wet dough to flow improperly and yield a dense, gummy product.)\n**Method adjustment:** No adjustment required\n**Allergen note:** No new allergens. Both bread flour and cake flour contain wheat gluten.\n**Serves:** I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": false,
+      "pass": false,
+      "judge_reason": "The system correctly evaluated that substituting cake flour for bread flour would ruin the gluten structure of an 80% hydration no-knead focaccia and appropriately refused the substitution.",
+      "input_tokens": 1331,
+      "output_tokens": 237,
+      "total_tokens": 1568,
+      "cost_usd": 0.0009918,
+      "latency_secs": 3.3503190000046743,
+      "allergen_failed": false,
+      "sub_worker_tokens": 485,
+      "allergen_worker_tokens": 421
+    },
+    {
+      "id": "S12",
+      "mode": "METHOD_COMPATIBILITY",
+      "answer": "**Ingredient change:** fine sea salt -> kosher salt (at the same weight)\n**Method adjustment:** Ensure the kosher salt is fully dissolved during the mixing stage due to grain size and density differences.\n**Allergen note:** No new allergens.\n**Serves:** 2 kg final dough",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "Kosher salt is a standard culinary substitute for fine sea salt, and advising to ensure it dissolves addresses the minor grain size difference without breaking the method or altering the flavor profile.",
+      "input_tokens": 1524,
+      "output_tokens": 136,
+      "total_tokens": 1660,
+      "cost_usd": 0.0007972000000000001,
+      "latency_secs": 33.91813540000294,
+      "allergen_failed": false,
+      "sub_worker_tokens": 599,
+      "allergen_worker_tokens": 538
+    },
+    {
+      "id": "S16",
+      "mode": "QUANTITY_SCALING",
+      "answer": "**Ingredient change:** [Scale all ingredients by 2: 2000 g strong bread flour, 1440 g water, 400 g ripe sourdough starter, 40 g fine sea salt]\n**Method adjustment:** [No adjustment required]\n**Allergen note:** [No new allergens. Doubling the recipe scales all ingredients proportionally but introduces no new allergens beyond the existing wheat gluten.]\n**Serves:** [4]",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly scaled all ingredients proportionally to double the recipe while maintaining the original serving count.",
+      "input_tokens": 1475,
+      "output_tokens": 262,
+      "total_tokens": 1737,
+      "cost_usd": 0.0010975,
+      "latency_secs": 3.2084374999976717,
+      "allergen_failed": false,
+      "sub_worker_tokens": 555,
+      "allergen_worker_tokens": 525
+    },
+    {
+      "id": "S18",
+      "mode": "QUANTITY_SCALING",
+      "answer": "**Ingredient change:** Bread flour (850 g -> 425 g), Water (620 g -> 310 g), Ripe sourdough starter (170 g -> 85 g), Fine sea salt (17 g implied -> 8.5 g)\n**Method adjustment:** Divide the dough into 2 pieces of about 415 g each instead of 4.\n**Allergen note:** No new allergens.\n**Serves:** 2 (halved from original 4)",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly halved all ingredient quantities and adjusted the portioning method to yield 2 baguettes instead of 4.",
+      "input_tokens": 1335,
+      "output_tokens": 215,
+      "total_tokens": 1550,
+      "cost_usd": 0.000938,
+      "latency_secs": 4.212708499995642,
+      "allergen_failed": false,
+      "sub_worker_tokens": 502,
+      "allergen_worker_tokens": 413
+    },
+    {
+      "id": "S21",
+      "mode": "OOC_REFUSAL",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the information requested is not present in the recipe cards.",
+      "input_tokens": 1436,
+      "output_tokens": 65,
+      "total_tokens": 1501,
+      "cost_usd": 0.0005933,
+      "latency_secs": 3.419058599989512,
+      "allergen_failed": false,
+      "sub_worker_tokens": 528,
+      "allergen_worker_tokens": 488
+    },
+    {
+      "id": "S22",
+      "mode": "OOC_REFUSAL",
+      "answer": "I couldn't find that in the recipe documents.",
+      "judge_acceptable": true,
+      "human_acceptable": true,
+      "pass": true,
+      "judge_reason": "The system correctly refused to answer because the recipe cards do not contain information regarding gluten-free substitutions or sodium content matching.",
+      "input_tokens": 1217,
+      "output_tokens": 145,
+      "total_tokens": 1362,
+      "cost_usd": 0.0007275999999999999,
+      "latency_secs": 4.205168300002697,
+      "allergen_failed": false,
+      "sub_worker_tokens": 397,
+      "allergen_worker_tokens": 415
+    }
+  ],
+  "handoffs": [
+    {
+      "case_id": "S01",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 256,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S01",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 256,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S01",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 631,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S02",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 190,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S02",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 190,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S02",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 542,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S06",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 287,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S06",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 287,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S06",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 769,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S07",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 193,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S07",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 193,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S07",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 505,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S11",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 198,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S11",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 198,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S11",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 520,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S12",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 308,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S12",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 308,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S12",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 719,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S16",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 253,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S16",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 253,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S16",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 670,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S18",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 205,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S18",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 205,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S18",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 519,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S21",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 277,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S21",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 277,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S21",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 622,
+      "label": "workers->orchestrator synthesis resend"
+    },
+    {
+      "case_id": "S22",
+      "from_agent": "orchestrator",
+      "to_agent": "substitution_worker",
+      "message_tokens": 180,
+      "label": "orchestrator->substitution_worker resend"
+    },
+    {
+      "case_id": "S22",
+      "from_agent": "orchestrator",
+      "to_agent": "allergen_worker",
+      "message_tokens": 180,
+      "label": "orchestrator->allergen_worker resend"
+    },
+    {
+      "case_id": "S22",
+      "from_agent": "substitution_worker+allergen_worker",
+      "to_agent": "orchestrator",
+      "message_tokens": 539,
+      "label": "workers->orchestrator synthesis resend"
+    }
+  ]
+}

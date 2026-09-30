@@ -1,0 +1,50 @@
+# Hand-off Log — Week 10 Orchestrator
+
+Every hand-off between orchestrator and workers, with token counts.
+
+| # | Case | From | To | Tokens | Label |
+|---|------|------|-----|--------|-------|
+| 1 | S01 | orchestrator | substitution_worker | 256 | orchestrator->substitution_worker resend |
+| 2 | S01 | orchestrator | allergen_worker | 256 | orchestrator->allergen_worker resend |
+| 3 | S01 | substitution_worker+allergen_worker | orchestrator | 631 | workers->orchestrator synthesis resend |
+| 4 | S02 | orchestrator | substitution_worker | 190 | orchestrator->substitution_worker resend |
+| 5 | S02 | orchestrator | allergen_worker | 190 | orchestrator->allergen_worker resend |
+| 6 | S02 | substitution_worker+allergen_worker | orchestrator | 542 | workers->orchestrator synthesis resend |
+| 7 | S06 | orchestrator | substitution_worker | 287 | orchestrator->substitution_worker resend |
+| 8 | S06 | orchestrator | allergen_worker | 287 | orchestrator->allergen_worker resend |
+| 9 | S06 | substitution_worker+allergen_worker | orchestrator | 769 | workers->orchestrator synthesis resend |
+| 10 | S07 | orchestrator | substitution_worker | 193 | orchestrator->substitution_worker resend |
+| 11 | S07 | orchestrator | allergen_worker | 193 | orchestrator->allergen_worker resend |
+| 12 | S07 | substitution_worker+allergen_worker | orchestrator | 505 | workers->orchestrator synthesis resend |
+| 13 | S11 | orchestrator | substitution_worker | 198 | orchestrator->substitution_worker resend |
+| 14 | S11 | orchestrator | allergen_worker | 198 | orchestrator->allergen_worker resend |
+| 15 | S11 | substitution_worker+allergen_worker | orchestrator | 520 | workers->orchestrator synthesis resend |
+| 16 | S12 | orchestrator | substitution_worker | 308 | orchestrator->substitution_worker resend |
+| 17 | S12 | orchestrator | allergen_worker | 308 | orchestrator->allergen_worker resend |
+| 18 | S12 | substitution_worker+allergen_worker | orchestrator | 719 | workers->orchestrator synthesis resend |
+| 19 | S16 | orchestrator | substitution_worker | 253 | orchestrator->substitution_worker resend |
+| 20 | S16 | orchestrator | allergen_worker | 253 | orchestrator->allergen_worker resend |
+| 21 | S16 | substitution_worker+allergen_worker | orchestrator | 670 | workers->orchestrator synthesis resend |
+| 22 | S18 | orchestrator | substitution_worker | 205 | orchestrator->substitution_worker resend |
+| 23 | S18 | orchestrator | allergen_worker | 205 | orchestrator->allergen_worker resend |
+| 24 | S18 | substitution_worker+allergen_worker | orchestrator | 519 | workers->orchestrator synthesis resend |
+| 25 | S21 | orchestrator | substitution_worker | 277 | orchestrator->substitution_worker resend |
+| 26 | S21 | orchestrator | allergen_worker | 277 | orchestrator->allergen_worker resend |
+| 27 | S21 | substitution_worker+allergen_worker | orchestrator | 622 | workers->orchestrator synthesis resend |
+| 28 | S22 | orchestrator | substitution_worker | 180 | orchestrator->substitution_worker resend |
+| 29 | S22 | orchestrator | allergen_worker | 180 | orchestrator->allergen_worker resend |
+| 30 | S22 | substitution_worker+allergen_worker | orchestrator | 539 | workers->orchestrator synthesis resend |
+
+## Aggregate by Hand-off Type
+
+| Hand-off Label | Total Tokens | % of All Hand-off Tokens |
+|---------------|-------------|---------------------------|
+| workers->orchestrator synthesis resend | 6,036 | 56.3% |
+| orchestrator->substitution_worker resend | 2,347 | 21.9% |
+| orchestrator->allergen_worker resend | 2,347 | 21.9% |
+
+**Total hand-off tokens:** 10,730
+
+**Context re-send multiplier:** 3.0x
+
+**Dominant hand-off:** `workers->orchestrator synthesis resend` — 56% of all hand-off tokens
